@@ -71,6 +71,7 @@ export default function Dashboard() {
     setFilteredUsers(users);
     setSearchValue('');
     setJobCountRange([0, 20]);
+    setShowSavedOnly(false);
   };
 
   const handleSaveFreelancer = (id: number) => {
