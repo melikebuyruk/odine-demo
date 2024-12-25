@@ -17,10 +17,10 @@ export const fetchUser = async (): Promise<User[]> => {
     posts.forEach((post: { userId: number }) => {
       jobCountMap[post.userId] = (jobCountMap[post.userId] || 0) + 1;
     });
-      
+
     const usersWithJobCount = users.map((user) => ({
       ...user,
-      jobCount: jobCountMap[user.id] || 0, 
+      jobCount: jobCountMap[user.id] || 0,
     }));
 
     return usersWithJobCount;
@@ -30,19 +30,15 @@ export const fetchUser = async (): Promise<User[]> => {
   }
 };
 
-
-
 export const searchByName = (users: User[], name: string): User[] => {
   return users.filter((user) =>
     user.name.toLowerCase().includes(name.toLowerCase())
   );
 };
 
-
 export const searchByJobCount = (users: User[], min: number, max: number): User[] => {
   return users.filter((user) => user.jobCount >= min && user.jobCount <= max);
 };
-
 
 export const searchByCity = (users: User[], city: string): User[] => {
   return users.filter((user) =>
@@ -50,15 +46,14 @@ export const searchByCity = (users: User[], city: string): User[] => {
   );
 };
 
-
 export async function mockPhoto(): Promise<string[]> {
   try {
-    const response = await fetch("https://api.thecatapi.com/v1/images/search?limit=10");
-    const result = await response.json();
+    const response = await axios.get("https://api.thecatapi.com/v1/images/search?limit=10");
+    const result = response.data;
     if (result && result.length > 0) {
-      return result.map((item: { url: string }) => item.url); 
+      return result.map((item: { url: string }) => item.url);
     } else {
-      return Array(10).fill("https://via.placeholder.com/345x194"); 
+      return Array(10).fill("https://via.placeholder.com/345x194");
     }
   } catch (error) {
     console.error("Error:", error);
@@ -105,7 +100,6 @@ export const getCommentsByJobId = async (jobId: number): Promise<any[]> => {
   }
 };
 
-
 export const getTotalCommentCountByUserId = async (userId: number): Promise<number> => {
   try {
     const [postsResponse, commentsResponse] = await Promise.all([
@@ -129,15 +123,3 @@ export const getTotalCommentCountByUserId = async (userId: number): Promise<numb
     throw new Error('Failed to fetch');
   }
 };
-
-
-
-
-
-
-
-
-
-
-
-
