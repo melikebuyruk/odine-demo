@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Freelancer Dashboard Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a single-page web application designed as a meeting point for freelancers and clients. The page serves as a dashboard where users can view and interact with freelancer profiles, manage saved freelancers, and simulate hiring actions.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. **Freelancer Dashboard**
+The main page of the application is built using the `Dashboard.tsx` file located in the `views` folder. It serves as the central point where all components are integrated.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. **FreelancerCard Component**
+- Displays essential information about freelancers on the dashboard.
+- Includes:
+  - **Freelancer Mock Photo**: Currently displaying mock photo from an online api.
+  - **Freelancer Name**
+  - **Arrow Icon**: Clicking this reveals detailed information about the freelancer.
+  - **"Hire Me" Icon**: Opens a pop-up form to simulate the process of hiring the freelancer.
+  - **"Save Me" Icon**: Allows users to save a freelancer. Saved freelancers can be viewed by clicking the "Show Saved Freelancers" button in the center of the dashboard.
+- Saved freelancers are stored in `localStorage`.
 
-### `npm test`
+### 3. **Hire Freelancer Pop-Up**
+- The `HireFreelancer` component is located in `components/HireFreelancer/HireFreelancer.tsx`.
+- This component includes a form where users can fill in relevant details to simulate hiring a freelancer. Currently, this feature is a demo and does not connect to any backend API.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. **Portfolio Component**
+- The `Portfolio` component, located in `components/Portfolio/Portfolio.tsx`, provides detailed information about a freelancer.
+- Includes:
+  - **Jobs Component**:
+    - Found in `components/Jobs/Jobs.tsx`.
+    - Displays the freelancer’s past jobs, comments for each job, and the count of comments.
+    - Comments can be toggled (shown or hidden) using a button.
 
-### `npm run build`
+### 5. **SearchBar Component**
+- Enables users to search for freelancers based on:
+  - Name
+  - Job count
+  - City
+- Integrated into the dashboard
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 6. **API Integration**
+- All APIs used in the project are written as functions in `services/userService.tsx`.
+- The `api.ts` file in the `services` folder sets up the base URL using `axios.create`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 7. **Data Types**
+- Custom TypeScript interfaces are defined in the `types` folder:
+  - `User.tsx`: Defines the structure of user data.
+  - `Job.tsx`: Defines the structure of job data.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 8. **Theme Management**
+- A centralized theme is managed using `Theme.tsx`, ensuring consistent styling throughout the application.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## How to Run the Project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
+- Ensure you have **Node.js** and **npm** installed on your machine.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Steps to Run
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Folders and Files
 
-### Code Splitting
+- **`views/Dashboard.tsx`**: The main page where all components are rendered.
+- **`components/FreelancerCard`**: Displays freelancer details and includes "Hire Me" and "Save Me" functionalities.
+- **`components/HireFreelancer/HireFreelancer.tsx`**: Pop-up form for hiring a freelancer.
+- **`components/Portfolio/Portfolio.tsx`**: Shows detailed freelancer information, including the `Jobs` component.
+- **`components/Jobs/Jobs.tsx`**: Displays past jobs and comments.
+- **`components/SearchBar`**: Enables searching for freelancers.
+- **`services/userService.tsx`**: Contains API functions.
+- **`services/api.ts`**: Sets up the base URL for APIs using Axios.
+- **`types/User.tsx` and `types/Job.tsx`**: Define TypeScript interfaces for the data structure.
+- **`Theme.tsx`**: Manages the project’s theme.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Additional Information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Application has one unit test in FreelancerCard.tsx
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
