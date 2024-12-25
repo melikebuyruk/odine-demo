@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FreelancerCard Component matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root freelancer-card css-1j74uew-MuiPaper-root-MuiCard-root"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+  >
+    <img
+      alt="Melike Buyruk"
+      class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img card-media css-1kuwa16-MuiCardMedia-root"
+      height="194"
+      src="https://via.placeholder.com/345x194"
+    />
+    <div
+      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root"
+      >
+        Melike Buyruk
+      </h5>
+    </div>
+    <div>
+      <button
+        class="css-1t9l90i"
+        data-testid="open-portfolio"
+        style="background-color: rgb(255, 255, 255); color: rgb(25, 118, 210);"
+        type="button"
+      >
+        Portfolio
+      </button>
+    </div>
+    <div
+      class="MuiCardActions-root css-bbbzor-MuiCardActions-root"
+    >
+      <div>
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-aixiz9-MuiButtonBase-root-MuiIconButton-root"
+          data-testid="hire-open-button"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            data-testid="HomeRepairServiceIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M18 16h-2v-1H8v1H6v-1H2v5h20v-5h-4zm2-8h-3V6c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v4h4v-2h2v2h8v-2h2v2h4v-4c0-1.1-.9-2-2-2m-5 0H9V6h6z"
+            />
+          </svg>
+        </button>
+      </div>
+      <button
+        aria-label="Save"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-aixiz9-MuiButtonBase-root-MuiIconButton-root"
+        data-testid="save-button-unsaved"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+          data-testid="TurnedInNotIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2m0 15-5-2.18L7 18V5h10z"
+          />
+        </svg>
+      </button>
+      <button
+        aria-expanded="false"
+        aria-label="show more"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-82czz1-MuiButtonBase-root-MuiIconButton-root"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+          data-testid="ExpandMoreIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

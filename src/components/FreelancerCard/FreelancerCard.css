@@ -1,0 +1,47 @@
+.freelancer-card {
+    max-width: 345px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.freelancer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-media {
+    height: 194px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expand-more {
+    margin-left: auto;
+    transition: transform 0.3s;
+}
+
+.expand-more[aria-expanded='true'] {
+    transform: rotate(180deg);
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-details {
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+}
